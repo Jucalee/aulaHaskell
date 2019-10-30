@@ -11,7 +11,7 @@ import Database.Persist.Postgresql
 
 getHomeR :: Handler Html
 getHomeR = do
-    defaultLayout $
+    defaultLayout $ do
         -- remoto
         -- addScriptRemote "link min do JQuery"
         -- está no projeto
