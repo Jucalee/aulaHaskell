@@ -1,5 +1,6 @@
 {-# LANGUAGE NoImplicitPrelude #-}
 {-# LANGUAGE OverloadedStrings #-}
+{-# LANGUAGE QuasiQuotes #-}
 {-# LANGUAGE TemplateHaskell #-}
 {-# LANGUAGE MultiParamTypeClasses #-}
 {-# LANGUAGE TypeFamilies #-}
@@ -16,6 +17,16 @@ getHomeR = do
         -- addScriptRemote "link min do JQuery"
         -- está no projeto
         addStylesheet (StaticR css_bootstrap_css)
+        toWidgetHead [julius|
+            function ola() {
+                alert("OLA MUNDO");
+            }
+        |]
+        toWidgetHead [lucius|
+            h1 {
+                color : red;
+            }
+        |]
         [whamlet|
             <div>
                 <h1> 
