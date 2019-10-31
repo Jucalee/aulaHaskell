@@ -1,0 +1,5 @@
+function page1() {
+    alert("Oi Amanda")
+}
+
+page1()
