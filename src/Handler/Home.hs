@@ -10,6 +10,11 @@ import Import
 --import Network.HTTP.Types.Status
 import Database.Persist.Postgresql
 
+getPage2R :: Handler Html
+getPage2R = do
+    defaultLayout $ dobro
+        $(whamlet "templates/page1.hamlet")        
+
 getPage1R :: Handler Html
 getPage1R = do
     defaultLayout $ dobro
@@ -34,11 +39,24 @@ getHomeR = do
             h1 {
                 color : red;
             }
+            
+            ul {
+                display: inline;
+                list-style: none;
+            }
         |]
         [whamlet|
             <div>
                 <h1> 
                     OLA MUNDO
+                    
+            <ul>
+                <li>
+                    <a href=@{Page1R}
+                        Pagina 1
+                <li>
+                    <a href=@{Page2R}
+                        Pagina 2
                     
             <button class"btn btn-danger" onclick="ola()">
                 OK
