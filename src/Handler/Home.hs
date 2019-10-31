@@ -14,12 +14,12 @@ import Database.Persist.Postgresql
 
 getPage2R :: Handler Html
 getPage2R = do
-    defaultLayout $ dobro
+    defaultLayout $ do
         $(whamlet "templates/page2.hamlet")        
 
 getPage1R :: Handler Html
 getPage1R = do
-    defaultLayout $ dobro
+    defaultLayout $ do
         addStylesheet (StaticR css_bootstrap_css)
         toWidgetHead $(juliusFile "templates/page1.julius")
         toWidgetHead $(luciusFile "templates/page1.lucius")
