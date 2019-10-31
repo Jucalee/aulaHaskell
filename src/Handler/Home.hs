@@ -8,12 +8,14 @@ module Handler.Home where
 
 import Import
 --import Network.HTTP.Types.Status
+import Text.Lucius
+import Text.Julius
 import Database.Persist.Postgresql
 
 getPage2R :: Handler Html
 getPage2R = do
     defaultLayout $ dobro
-        $(whamlet "templates/page1.hamlet")        
+        $(whamlet "templates/page2.hamlet")        
 
 getPage1R :: Handler Html
 getPage1R = do
