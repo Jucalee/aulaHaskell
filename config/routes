@@ -6,3 +6,5 @@
 / HomeR GET 
 /p1 Page1R GET
 /p2 Page2R GET
+
+/cadastro UsuarioR GET POST

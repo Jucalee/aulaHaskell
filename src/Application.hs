@@ -22,6 +22,7 @@ import Database.Persist.Postgresql          (createPostgresqlPool, pgConnStr,
                                              pgPoolSize, runSqlPool)
 import Import
 import Language.Haskell.TH.Syntax           (qLocation)
+import Network.Wai.Handler.WarpTLS
 import Network.Wai (Middleware)
 import Network.Wai.Handler.Warp             (Settings, defaultSettings,
                                              defaultShouldDisplayException,
@@ -38,6 +39,7 @@ import System.Log.FastLogger                (defaultBufSize, newStdoutLoggerSet,
 -- Don't forget to add new modules to your cabal file!
 import Handler.Common
 import Handler.Home
+import Handler.Usuario
 
 -- This line actually creates our YesodDispatch instance. It is the second half
 -- of the call to mkYesodData which occurs in Foundation.hs. Please see the
@@ -138,22 +140,17 @@ develMain = develMainHelper getApplicationDev
 -- | The @main@ function for an executable running this site.
 appMain :: IO ()
 appMain = do
-    -- Get the settings from all relevant sources
+    let cp s = "/etc/letsencrypt/live/btsworld.cf/" ++ s
     settings <- loadYamlSettingsArgs
-        -- fall back to compile-time values, set to [] to require values at runtime
         [configSettingsYmlValue]
-
-        -- allow environment variables to override
         useEnv
-
-    -- Generate the foundation from the settings
     foundation <- makeFoundation settings
-
-    -- Generate a WAI Application from the foundation
     app <- makeApplication foundation
+    runTLS
+        (tlsSettingsChain (cp "cert.pem") [cp "chain.pem"] (cp "privkey.pem"))
+        (warpSettings foundation)
+        app
 
-    -- Run the application with Warp
-    runSettings (warpSettings foundation) app
 
 
 --------------------------------------------------------------
