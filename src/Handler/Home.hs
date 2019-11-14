@@ -33,6 +33,7 @@ getHomeR = do
         -- addScriptRemote "link min do JQuery"
         -- está no projeto
         addStylesheet (StaticR css_bootstrap_css)
+        sess <- lookupSession "_NOME"
         toWidgetHead [julius|
             function ola() {
                 alert("OLA MUNDO");
@@ -60,6 +61,17 @@ getHomeR = do
                 <li>
                     <a href=@{Page2R}
                         Pagina 2
+                $maybe nome <- sess
+                    <li>
+                        <div>
+                            Ola #{nome}
+                        <form method=post action=@{SairR}>
+                            <input type="submit" value="Sair"
+                $nothing
+                    <li>
+                        <div>
+                            CONVIDADO
+                        
                     
             <button class"btn btn-danger" onclick="ola()">
                 OK

@@ -8,3 +8,5 @@
 /p2 Page2R GET
 
 /cadastro UsuarioR GET POST
+/entrar EntrarR GET POST
+/sair SairR POST
