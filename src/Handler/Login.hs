@@ -22,8 +22,8 @@ getEntrarR :: Handler Html
 getEntrarR = do
     (widget, _) <- generateFormPost formLogin
     msg <- getMessage
-    defaultLayout $ do
-        [|whamlet
+    defaultLayout $
+        [whamlet|
             $maybe mensa <- msg
                 <div>
                     ^{mensa}
