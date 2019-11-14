@@ -39,7 +39,7 @@ getUsuarioR = do
 
 postUsuarioR :: Handler Html
 postUsuarioR = do 
-    ((result,),) <- runFormPost formUsu
+    ((result,_),_) <- runFormPost formUsu
     case result of
         FormSuccess (usuario,veri) -> do
             if (usuarioSenha usuario == veri) then do
