@@ -26,7 +26,7 @@ getUsuarioR = do
     (widget, _) <- generateFormPost formUsu
     msg <- getMessage
     defaultLayout $
-        [|whamlet
+        [whamlet|
             $maybe mensa <- msg
                 <div>
                     ^{mensa}
