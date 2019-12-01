@@ -17,8 +17,8 @@ perguntaCB = do
   optionsPairs $ 
       map (\r -> (perguntaDescricao $ entityVal r, entityKey r)) rows
 
-formAlternativa :: Form Atua 
-formAlternativa = renderBootstrap $ Atua
+formAlternativa :: Form Alternativa 
+formAlternativa = renderBootstrap $ Alternativa
     <$> areq (selectField perguntaCB) "Pergunta: " Nothing
     <$> areq textField "Alternativa: " Nothing --testar--
 
