@@ -25,14 +25,14 @@ instance Yesod App where
     makeLogger = return . appLogger
     
     authRoute _ = Just EntrarR
-    
+
     isAuthorized HomeR _ = return Authorized
     isAuthorized EntrarR _ = return Authorized
-    isAuthorized UsuarioR _ = return Authorized 
+    isAuthorized UsuarioR _ = return Authorized
     isAuthorized PerguntaR _ = return Authorized
     isAuthorized AlternativaR _ return Authorized
     isAuthorized _ _ = isUsuario
-    
+
 isUsuario :: Handler AuthResult
 isUsuario = do 
     sess <- lookupSession "_NOME"
