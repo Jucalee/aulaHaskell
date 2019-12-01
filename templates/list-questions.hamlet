@@ -1,0 +1,36 @@
+
+$forall (Entity _ pergunta, Entity _ alternativa) <- atores
+<h1>
+     #{serieNome serie}
+<ul>
+        <li>
+            #{atorNome ator}
+            
+<table>
+	<tr>
+    	<th>ID</th>
+        <th>Questão</th>
+        <th>Alternativa</th>
+   	</tr>
+    <tr>
+    	<td>1</td>
+      	<td>Qual o último membro do BTS a ser revelado?</td>
+      	<td>
+      		<b>a. V</b>
+			b. RM
+			c. Jimin
+			d. Suga
+		</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Qual dos integrantes é faixa preta em Taekwondo?</td>
+      <td>
+      	a. Suga
+		b. Jin
+		<b>c. Jimin</b>
+		d. J-Hope
+
+      </td>
+    </tr>
+</table>

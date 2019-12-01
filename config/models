@@ -6,3 +6,27 @@ Usuario
     senha Text
     UniqueEmailRest email
     deriving Show
+    
+Quiz
+    usuarioid UsuarioId
+    pontuacao Int
+    datahoracriacao TimeOfDay
+    deriving Show
+    
+Pergunta
+    descricao Text
+    imagem Text
+    deriving Show
+    
+Alternativa
+    perguntaid PerguntaId
+    descricao Text
+    iscorreta Bool
+    deriving Show
+    
+QuizPergunta
+    quizid QuizId
+    perguntaid PerguntaId
+    iscorreta Bool
+    deriving Show
+    

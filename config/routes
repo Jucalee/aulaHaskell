@@ -10,3 +10,7 @@
 /cadastro UsuarioR GET POST
 /entrar EntrarR GET POST
 /sair SairR POST
+
+/pergunta PerguntaR GET POST
+/alternativa AlternativaR GET POST
+
