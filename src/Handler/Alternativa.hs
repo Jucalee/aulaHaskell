@@ -20,7 +20,8 @@ perguntaCB = do
 formAlternativa :: Form Alternativa 
 formAlternativa = renderBootstrap $ Alternativa
     <$> areq (selectField perguntaCB) "Pergunta: " Nothing
-    <$> areq textField "Alternativa: " Nothing --testar--
+    <*> areq textField "Alternativa: " Nothing --testar
+    <*> areq boolField "É correta?: " Nothing
 
 postAlternativaR :: Handler Html
 postAlternativaR = do
