@@ -20,7 +20,7 @@ perguntaCB = do
 formAlternativa :: Form Atua 
 formAlternativa = renderBootstrap $ Atua
     <$> areq (selectField perguntaCB) "Pergunta: " Nothing
-    <$> areq textField "Alternativa: " Nothing --testar
+    <$> areq textField "Alternativa: " Nothing --testar--
 
 postAlternativaR :: Handler Html
 postAlternativaR = do
