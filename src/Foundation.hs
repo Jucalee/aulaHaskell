@@ -32,6 +32,13 @@ instance Yesod App where
     isAuthorized PerguntaR _ = return Authorized
     isAuthorized AlternativaR _ return Authorized
 
+isUsuario :: Handler AuthResult
+isUsuario = do 
+    sess <- lookupSession "_NOME"
+    case sess of 
+        Nothing -> return AuthenticationRequired
+        Just _ -> return Authorized
+
 type Form a = Html -> MForm Handler (FormResult a, Widget)
 
 instance YesodPersist App where
