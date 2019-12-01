@@ -29,8 +29,8 @@ instance Yesod App where
     isAuthorized HomeR _ = return Authorized
     isAuthorized EntrarR _ = return Authorized
     isAuthorized UsuarioR _ = return Authorized
-    isAuthorized PerguntaR _ = return Authorized
-    isAuthorized AlternativaR _ return Authorized
+    isAuthorized (StaticR _) _ = return Authorized
+    isAuthorized _ _ = isUsuario
 
 isUsuario :: Handler AuthResult
 isUsuario = do 
