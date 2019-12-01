@@ -10,7 +10,7 @@ Usuario
 Quiz
     usuarioid UsuarioId
     pontuacao Int
-    datahoracriacao TimeOfDay
+    datahoracriacao TIMESTAMP
     deriving Show
     
 Pergunta
