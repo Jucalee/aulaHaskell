@@ -39,7 +39,7 @@ getPerguntaR = do
 
 postPerguntaR :: Handler Html
 postPerguntaR = do 
-    ((result,_),_) <- runFormPost formAtor
+    ((result,_),_) <- runFormPost formPergunta
     case result of 
         FormSuccess pergunta -> do 
             runDB $ insert pergunta 
