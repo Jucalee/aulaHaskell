@@ -4,7 +4,7 @@
 {-# LANGUAGE QuasiQuotes #-}
 {-# LANGUAGE MultiParamTypeClasses #-}
 {-# LANGUAGE TypeFamilies #-}
-module Handler.Usuario where
+module Handler.Alternativa where
 
 import Import
 -- import Network.HTTP.Types.Status
