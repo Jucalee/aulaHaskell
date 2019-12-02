@@ -5,11 +5,11 @@
         <th>Questão
         <th>Alternativa
     
-    $forall (Entity _ pergunta, Entity _ _) <- perguntas
+    $forall (Entity perguntaid pergunta, Entity _ _) <- conjunto
         <tr>
             <td>#{perguntaid pergunta}
             <td>#{perguntaDescricao pergunta}
             <td>
-                $forall (Entity _ _, Entity _ alternativa) <- alternativas
+                $forall (Entity _ _, Entity _ alternativa) <- conjunto
                     <p>#{alternativaDescricao alternativa}</p>
             
