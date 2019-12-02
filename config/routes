@@ -12,5 +12,5 @@
 /sair SairR POST
 
 /pergunta PerguntaR GET POST
-/alternativa AlternativaR GET POST
+/resposta RespostaR GET POST
 
