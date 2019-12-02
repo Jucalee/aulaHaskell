@@ -4,7 +4,7 @@
 {-# LANGUAGE QuasiQuotes #-}
 {-# LANGUAGE MultiParamTypeClasses #-}
 {-# LANGUAGE TypeFamilies #-}
-module Handler.Resposta where
+module Handler.Alternativa where
 
 import Import
 -- import Network.HTTP.Types.Status
@@ -17,28 +17,28 @@ perguntaCB = do
   optionsPairs $ 
       map (\r -> (perguntaDescricao $ entityVal r, entityKey r)) rows
 
-formResposta :: Form Resposta 
-formResposta = renderBootstrap $ Resposta
+formAlternativa :: Form Alternativa 
+formAlternativa = renderBootstrap $ Alternativa
     <$> areq (selectField perguntaCB) "Pergunta: " Nothing
     <*> areq textField "Alternativa: " Nothing --testar
     <*> areq boolField "É correta?: " Nothing
 
-postRespostaR :: Handler Html
-postRespostaR = do
-    ((result,_),_) <- runFormPost formResposta
+postAlternativaR :: Handler Html
+postAlternativaR = do
+    ((result,_),_) <- runFormPost formAlternativa
     case result of
-        FormSuccess resposta -> do
-            runDB $ insert resposta
+        FormSuccess Alternativa -> do
+            runDB $ insert Alternativa
             setMessage [shamlet|
                 <h2>
                     ALTERNATIVA INSERIDA COM SUCESSO
             |]
-            redirect RespostaR
+            redirect AlternativaR
         _ -> redirect HomeR
 
-getRespostaR :: Handler Html
-getRespostaR = do 
-    (widget,_) <- generateFormPost formResposta
+getAlternativaR :: Handler Html
+getAlternativaR = do 
+    (widget,_) <- generateFormPost formAlternativa
     msg <- getMessage
     defaultLayout $ 
         [whamlet|
@@ -47,9 +47,9 @@ getRespostaR = do
                     ^{mensa}
             
             <h1>
-                CADASTRO DA RESPOSTA
+                CADASTRO DA Alternativa
             
-            <form method=post action=@{RespostaR}>
+            <form method=post action=@{AlternativaR}>
                 ^{widget}
                 <input type="submit" value="Cadastrar">
         |]
@@ -57,10 +57,10 @@ getRespostaR = do
 
 -- getAlternativeListR :: PerguntaId -> Handler Html
 -- getAlternativeListR serieid = do 
---     let sql = "SELECT descricao FROM resposta \
---           \ INNER JOIN pergunta ON pergunta.id = resposta.perguntaId \
+--     let sql = "SELECT descricao FROM Alternativa \
+--           \ INNER JOIN pergunta ON pergunta.id = Alternativa.perguntaId \
 --           \ WHERE pergunta.id = ?"
---     resposta <- runDB $ get404 respostaid
+--     Alternativa <- runDB $ get404 Alternativaid
 --     pergunta <- runDB $ rawSql sql [toPersistValue perguntaid] :: Handler [(Entity Pergunta,Entity Serie,Entity Ator)]
 --     defaultLayout $ do 
 --         [whamlet|

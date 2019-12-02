@@ -41,7 +41,7 @@ import Handler.Common
 import Handler.Home
 import Handler.Usuario
 import Handler.Login
-import Handler.Resposta
+import Handler.Alternativa
 import Handler.Pergunta
 
 -- This line actually creates our YesodDispatch instance. It is the second half

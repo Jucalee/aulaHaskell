@@ -12,7 +12,7 @@
 /sair SairR POST
 
 /pergunta PerguntaR GET POST
-/resposta RespostaR GET POST
+/alternativa AlternativaR GET POST
 
 /listquest ListQuestR GET
 
