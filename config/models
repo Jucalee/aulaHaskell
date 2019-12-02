@@ -17,7 +17,7 @@ Pergunta
     descricao Text
     deriving Show
     
-Alternativa
+Resposta
     perguntaid PerguntaId
     descricao Text
     iscorreta Bool

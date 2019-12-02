@@ -17,18 +17,18 @@ perguntaCB = do
   optionsPairs $ 
       map (\r -> (perguntaDescricao $ entityVal r, entityKey r)) rows
 
-formAlternativa :: Form Alternativa 
+formResposta :: Form Resposta 
 formAlternativa = renderBootstrap $ Alternativa
     <$> areq (selectField perguntaCB) "Pergunta: " Nothing
     <*> areq textField "Alternativa: " Nothing --testar
     <*> areq boolField "É correta?: " Nothing
 
-postAlternativaR :: Handler Html
-postAlternativaR = do
+postRespostaR :: Handler Html
+postRespostaR = do
     ((result,_),_) <- runFormPost formAlternativa
     case result of
-        FormSuccess alternativa -> do
-            runDB $ insert alternativa
+        FormSuccess resposta -> do
+            runDB $ insert resposta
             setMessage [shamlet|
                 <h2>
                     ALTERNATIVA INSERIDA COM SUCESSO
@@ -36,8 +36,8 @@ postAlternativaR = do
             redirect AlternativaR
         _ -> redirect HomeR
 
-getAlternativaR :: Handler Html
-getAlternativaR = do 
+getRespostaR :: Handler Html
+getRespostaR = do 
     (widget,_) <- generateFormPost formAlternativa
     msg <- getMessage
     defaultLayout $ 
