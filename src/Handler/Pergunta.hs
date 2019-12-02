@@ -48,9 +48,9 @@ postPerguntaR = do
             redirect PerguntaR
         _ -> redirect HomeR
         
--- getListQuestR :: Handler Html
--- getListQuestR = do
---     let sql = "SELECT ??, ?? FROM pergunta \
---           \ INNER JOIN alternativa ON pergunta.id = alternativa.perguntaid"
---     defaultLayout $ do
---         $(whamletFile "templates/list-questions.hamlet")
+getListQuestR :: Handler Html
+getListQuestR = do
+    let sql = "SELECT ??, ?? FROM pergunta \
+          \ INNER JOIN alternativa ON pergunta.id = alternativa.perguntaid"
+    defaultLayout $ do
+        $(whamletFile "templates/list-questions.hamlet")

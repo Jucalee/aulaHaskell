@@ -14,3 +14,5 @@
 /pergunta PerguntaR GET POST
 /resposta RespostaR GET POST
 
+/listquest ListQuestR GET
+

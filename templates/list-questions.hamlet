@@ -1,10 +1,4 @@
-
-$forall (Entity _ pergunta, Entity _ alternativa) <- atores
-<h1>
-     #{serieNome serie}
-<ul>
-        <li>
-            #{atorNome ator}
+<h1>Listagem de questões</h1>
             
 <table>
 	<tr>
@@ -12,25 +6,12 @@ $forall (Entity _ pergunta, Entity _ alternativa) <- atores
         <th>Questão</th>
         <th>Alternativa</th>
    	</tr>
+   	$forall (Entity _ pergunta, Entity _ alternativa) <- pergunta
     <tr>
-    	<td>1</td>
-      	<td>Qual o último membro do BTS a ser revelado?</td>
+    	<td>#{perguntaId pergunta}</td>
+      	<td>#{perguntaDescricao pergunta}</td>
       	<td>
-      		<b>a. V</b>
-			b. RM
-			c. Jimin
-			d. Suga
+      		#{Data.Text.concat $ intersperse "\b " (Prelude.map alternativaDescricao $ sort $ alternativa)}
 		</td>
-    </tr>
-    <tr>
-      <td>2</td>
-      <td>Qual dos integrantes é faixa preta em Taekwondo?</td>
-      <td>
-      	a. Suga
-		b. Jin
-		<b>c. Jimin</b>
-		d. J-Hope
-
-      </td>
     </tr>
 </table>
