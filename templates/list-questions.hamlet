@@ -6,7 +6,7 @@
         <th>Alternativa
     
     $forall (Entity perguntaid pergunta, Entity _ alternativa) <- perguntas
-    <tr>
-        <td>#{perguntaid pergunta}
-        <td>#{perguntaDescricao pergunta}
-        <td>#{Data.Text.concat $ intersperse "\b " (Prelude.map alternativaDescricao $ sort $ alternativa)}
+        <tr>
+            <td>#{perguntaid pergunta}
+            <td>#{perguntaDescricao pergunta}
+            <td>#{Data.Text.concat $ intersperse "\b " (Prelude.map alternativaDescricao $ sort $ alternativa)}
