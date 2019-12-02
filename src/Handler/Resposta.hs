@@ -47,7 +47,7 @@ getRespostaR = do
                     ^{mensa}
             
             <h1>
-                CADASTRO DE RESPOSTA
+                CADASTRO DA RESPOSTA
             
             <form method=post action=@{RespostaR}>
                 ^{widget}
