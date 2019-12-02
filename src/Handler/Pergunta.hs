@@ -65,10 +65,8 @@ getListQuestR = do
                     <th>Questão
                     <th>Alternativa
                 
-                $forall (Entity _ pergunta, Entity _ alternativa) <- perguntas
-                    <tr>
-                        <td>#{perguntaid pergunta}
-                        <td>#{perguntaDescricao pergunta}
-                        <td>#{Data.Text.concat $ intersperse "\b " (Prelude.map alternativaDescricao $ sort $ alternativa)}
+            <div>
+                #{perguntas}
+                    
         |]
         -- $(whamletFile "templates/list-questions.hamlet")
