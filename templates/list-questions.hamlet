@@ -1,17 +1,13 @@
-<h1>Listagem de questões</h1>
-            
+<h1>Listagem de questões
 <table>
 	<tr>
-    	<th>ID</th>
-        <th>Questão</th>
-        <th>Alternativa</th>
-   	</tr>
+    	<th>ID
+        <th>Questão
+        <th>Alternativa
+   	
    	$forall (Entity _ pergunta, Entity _ alternativa) <- pergunta
     <tr>
-    	<td>#{perguntaId pergunta}</td>
-      	<td>#{perguntaDescricao pergunta}</td>
+    	<td>#{perguntaId pergunta}
+      	<td>#{perguntaDescricao pergunta}
       	<td>
       		#{Data.Text.concat $ intersperse "\b " (Prelude.map alternativaDescricao $ sort $ alternativa)}
-		</td>
-    </tr>
-</table>
