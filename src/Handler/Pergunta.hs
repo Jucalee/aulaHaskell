@@ -56,5 +56,6 @@ getListQuestR = do
           \ INNER JOIN alternativa ON  alternativa.perguntaid = pergunta.id"
     conjunto <- runDB $ rawSql sql [] :: Handler [(Entity Pergunta,Entity Alternativa)] 
     defaultLayout $ do
+        setTitle "Listagem de Questões"
         addStylesheet (StaticR css_bootstrap_css)
         $(whamletFile "templates/list-questions.hamlet")
