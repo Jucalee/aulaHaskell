@@ -54,7 +54,7 @@ getListQuestR :: Handler Html
 getListQuestR = do
     let sql = "SELECT ??, ?? FROM pergunta \
           \ INNER JOIN alternativa ON  alternativa.perguntaid = pergunta.id"
-    perguntas <- runDB $ rawSql sql [toPersistValue _] :: Handler [(Entity Pergunta,Entity Alternativa)] 
+    perguntas <- runDB $ rawSql sql [] :: Handler [(Entity Pergunta,Entity Alternativa)] 
     defaultLayout $ do
         addStylesheet (StaticR css_bootstrap_css)
         $(whamletFile "templates/list-questions.hamlet")
