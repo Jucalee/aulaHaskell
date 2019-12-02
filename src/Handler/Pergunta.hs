@@ -11,6 +11,7 @@ import Text.Lucius
 import Text.Julius
 --import Network.HTTP.Types.Stactus
 import Database.Persist.Postgresql
+import Database.Esqueleto
 import Data.Text (Text, concat)
 import Prelude
 --
@@ -53,7 +54,7 @@ postPerguntaR = do
 getListaQuestoesR :: Handler Html
 getListaQuestoesR = do
     let sql = "SELECT ??, ?? FROM pergunta \
-          \ INNER JOIN alternativa ON  alternativa.perguntaid = pergunta.id group by pergunta.id"
+          \ INNER JOIN alternativa ON  alternativa.perguntaid = pergunta.id"
     conjunto <- runDB $ rawSql sql [] :: Handler [(Entity Pergunta,Entity Alternativa)] 
     defaultLayout $ do
         setTitle "Listagem de Questões"
