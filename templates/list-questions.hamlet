@@ -5,7 +5,7 @@
         <th>Questão
         <th>Alternativa
     
-    $forall (Entity perguntaid pergunta, Entity _ alternativa) <- perguntas
+    $forall (Entity _ pergunta, Entity alternativaid alternativa) <- perguntas
         <tr>
             <td>#{perguntaid pergunta}
             <td>#{perguntaDescricao pergunta}
