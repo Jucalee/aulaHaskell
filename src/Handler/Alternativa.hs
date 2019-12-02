@@ -55,7 +55,7 @@ getAlternativaR = do
         |]
         
 
--- getAlternativeListR :: PerguntaId -> Handler --Html
+-- getAlternativeListR :: PerguntaId -> Handler Html
 -- getAlternativeListR serieid = do 
 --     let sql = "SELECT descricao FROM resposta \
 --           \ INNER JOIN pergunta ON pergunta.id = resposta.perguntaId \
