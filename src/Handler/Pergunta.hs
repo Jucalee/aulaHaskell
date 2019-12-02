@@ -11,7 +11,7 @@ import Text.Lucius
 import Text.Julius
 --import Network.HTTP.Types.Stactus
 import Database.Persist.Postgresql
-import Data.Text
+import Data.Text.concat
 import Prelude
 --
 -- renderDivs
@@ -55,4 +55,5 @@ getListQuestR = do
     let sql = "SELECT ??, ?? FROM pergunta \
           \ INNER JOIN alternativa ON pergunta.id = alternativa.perguntaid"
     defaultLayout $ do
+        addStylesheet (StaticR css_bootstrap_css)
         $(whamletFile "templates/list-questions.hamlet")
