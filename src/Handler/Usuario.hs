@@ -52,7 +52,7 @@ postUsuarioR = do
             else do
                 setMessage [shamlet|
                     <div>
-                        SENHA E VERIFICACAO N CONFEREM
+                        SENHA E VERIFICACAO N SAO IDENTICAS
                 |]
                 redirect UsuarioR
         _ -> redirect HomeR
