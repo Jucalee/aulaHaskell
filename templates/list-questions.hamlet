@@ -10,6 +10,6 @@
             <td>#{perguntaid pergunta}
             <td>#{perguntaDescricao pergunta}
             <td>
-                $forall (Entity perguntaid _, Entity _ alternativa) <- alternativas
+                $forall (Entity _ _, Entity _ alternativa) <- alternativas
                     <p>#{alternativaDescricao alternativa}</p>
             
