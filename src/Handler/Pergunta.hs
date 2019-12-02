@@ -54,8 +54,9 @@ postPerguntaR = do
 getListaQuestoesR :: Handler Html
 getListaQuestoesR = do
     let sql = "SELECT ??, ?? FROM pergunta \
-          \ INNER JOIN alternativa ON  alternativa.perguntaid = pergunta.id"
-    conjunto <- runDB $ rawSql sql [] :: Handler [(Entity Pergunta,Entity Alternativa)] 
+          \ INNER JOIN alternativa ON  alternativa.perguntaid = pergunta.id \
+          \ GROUP BY ??"
+    conjunto <- runDB $ rawSql sql [] :: Handler [(Entity Pergunta,Entity Alternativa, Entity Pergunta)] 
     defaultLayout $ do
         setTitle "Listagem de Questões"
         addStylesheet (StaticR css_bootstrap_css)
