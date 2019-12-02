@@ -1,15 +1,12 @@
 <h1>Listagem de questões
 <table>
     <tr>
-        <th>ID
         <th>Questão
         <th>Alternativa
     
-    $forall (Entity perguntaid pergunta, Entity _ _) <- conjunto
+    $forall (Entity perguntaid pergunta, Entity _ alternativa) <- conjunto
         <tr>
-            <td>#{perguntaid pergunta}
             <td>#{perguntaDescricao pergunta}
             <td>
-                $forall (Entity _ _, Entity _ alternativa) <- conjunto
-                    <p>#{alternativaDescricao alternativa}</p>
+                <p>#{alternativaDescricao alternativa}</p>
             
