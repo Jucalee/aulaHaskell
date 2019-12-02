@@ -27,8 +27,8 @@ postAlternativaR :: Handler Html
 postAlternativaR = do
     ((result,_),_) <- runFormPost formAlternativa
     case result of
-        FormSuccess Alternativa -> do
-            runDB $ insert Alternativa
+        FormSuccess alternativa -> do
+            runDB $ insert alternativa
             setMessage [shamlet|
                 <h2>
                     ALTERNATIVA INSERIDA COM SUCESSO
