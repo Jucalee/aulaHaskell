@@ -18,7 +18,7 @@ perguntaCB = do
       map (\r -> (perguntaDescricao $ entityVal r, entityKey r)) rows
 
 formResposta :: Form Resposta 
-formAlternativa = renderBootstrap $ Alternativa
+formResposta = renderBootstrap $ Alternativa
     <$> areq (selectField perguntaCB) "Pergunta: " Nothing
     <*> areq textField "Alternativa: " Nothing --testar
     <*> areq boolField "É correta?: " Nothing
