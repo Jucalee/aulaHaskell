@@ -18,7 +18,7 @@ perguntaCB = do
       map (\r -> (perguntaDescricao $ entityVal r, entityKey r)) rows
 
 formResposta :: Form Resposta 
-formResposta = renderBootstrap $ Alternativa
+formResposta = renderBootstrap $ Resposta
     <$> areq (selectField perguntaCB) "Pergunta: " Nothing
     <*> areq textField "Alternativa: " Nothing --testar
     <*> areq boolField "É correta?: " Nothing
@@ -33,7 +33,7 @@ postRespostaR = do
                 <h2>
                     ALTERNATIVA INSERIDA COM SUCESSO
             |]
-            redirect AlternativaR
+            redirect RespostaR
         _ -> redirect HomeR
 
 getRespostaR :: Handler Html
@@ -49,7 +49,7 @@ getRespostaR = do
             <h1>
                 CADASTRO DE RESPOSTA
             
-            <form method=post action=@{AlternativaR}>
+            <form method=post action=@{RespostaR}>
                 ^{widget}
                 <input type="submit" value="Cadastrar">
         |]
