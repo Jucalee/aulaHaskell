@@ -15,7 +15,6 @@ Quiz
     
 Pergunta
     descricao Text
-    imagem Text
     deriving Show
     
 Alternativa

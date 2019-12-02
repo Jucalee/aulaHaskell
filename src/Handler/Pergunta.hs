@@ -16,8 +16,6 @@ import Database.Persist.Postgresql
 formPergunta :: Form Pergunta
 formPergunta = renderBootstrap $ Pergunta
     <$> areq textField "Descrição: " Nothing
-    <*> aopt textField "Imagem: " Nothing
-    
 
 getPerguntaR :: Handler Html
 getPerguntaR = do 
