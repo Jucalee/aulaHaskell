@@ -1,12 +1,9 @@
-<h1>Listagem de questões
-<table>
-    <tr>
-        <th>Questão
-        <th>Alternativa
+<div .container>
+
+    <h1>Listagem de questões
     
     $forall (Entity perguntaid pergunta, Entity _ alternativa) <- conjunto
-        <tr>
-            <td>#{perguntaDescricao pergunta}
-            <td>
-                <p>#{alternativaDescricao alternativa}</p>
-            
+        <div .col-md-8>
+            <h3>Questão: #{perguntaDescricao pergunta}
+            <li>
+                <ul>#{alternativaDescricao alternativa}
