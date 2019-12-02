@@ -50,8 +50,8 @@ postPerguntaR = do
             redirect PerguntaR
         _ -> redirect HomeR
         
-getListQuestR :: Handler Html
-getListQuestR = do
+getListaQuestoesR :: Handler Html
+getListaQuestoestR = do
     let sql = "SELECT ??, ?? FROM pergunta \
           \ INNER JOIN alternativa ON  alternativa.perguntaid = pergunta.id"
     conjunto <- runDB $ rawSql sql [] :: Handler [(Entity Pergunta,Entity Alternativa)] 
