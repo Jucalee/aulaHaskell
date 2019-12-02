@@ -57,4 +57,18 @@ getListQuestR = do
     perguntas <- runDB $ rawSql sql [] :: Handler [(Entity Pergunta,Entity Alternativa)] 
     defaultLayout $ do
         addStylesheet (StaticR css_bootstrap_css)
-        $(whamletFile "templates/list-questions.hamlet")
+        [whamlet|
+            <h1>Listagem de questões
+            <table>
+                <tr>
+                    <th>ID
+                    <th>Questão
+                    <th>Alternativa
+                
+                $forall (Entity _ pergunta, Entity _ alternativa) <- perguntas
+                    <tr>
+                        <td>#{perguntaid pergunta}
+                        <td>#{perguntaDescricao pergunta}
+                        <td>#{Data.Text.concat $ intersperse "\b " (Prelude.map alternativaDescricao $ sort $ alternativa)}
+        |]
+        -- $(whamletFile "templates/list-questions.hamlet")
