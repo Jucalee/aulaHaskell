@@ -11,7 +11,7 @@ import Text.Lucius
 import Text.Julius
 --import Network.HTTP.Types.Stactus
 import Database.Persist.Postgresql
-import Data.Text.concat
+import Data.Text (Text, concat)
 import Prelude
 --
 -- renderDivs
