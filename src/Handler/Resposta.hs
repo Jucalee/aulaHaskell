@@ -25,7 +25,7 @@ formResposta = renderBootstrap $ Resposta
 
 postRespostaR :: Handler Html
 postRespostaR = do
-    ((result,_),_) <- runFormPost formAlternativa
+    ((result,_),_) <- runFormPost formResposta
     case result of
         FormSuccess resposta -> do
             runDB $ insert resposta
@@ -38,7 +38,7 @@ postRespostaR = do
 
 getRespostaR :: Handler Html
 getRespostaR = do 
-    (widget,_) <- generateFormPost formAlternativa
+    (widget,_) <- generateFormPost formResposta
     msg <- getMessage
     defaultLayout $ 
         [whamlet|
