@@ -36,7 +36,6 @@ getHomeR = do
 getBandaR :: Handler Html
 getBandaR = do
     defaultLayout $ do
-        defaultLayout $ do
         addStylesheet (StaticR css_animate_css)
         addStylesheet (StaticR css_icomoon_css)
         addStylesheet (StaticR css_bootstrap_css)
