@@ -1,6 +1,6 @@
 <div #corpo-site>
-    <div #page>
-        <div #header>
+	<div #page>
+		<div #header>
 			<header #header-section>
 				<div .container>
 					<div .nav-header>
