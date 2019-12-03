@@ -41,9 +41,9 @@ getHomeR = do
         toWidgetHead $(luciusFile "templates/lucius/icomoon.lucius")
         toWidgetHead $(luciusFile "templates/lucius/style.lucius")
         toWidgetHead $(luciusFile "templates/lucius/superfish.lucius")
-        toWidgetHead $(juliusFile "templates/julius/hoverIntent.julius")
-        toWidgetHead $(juliusFile "templates/julius/superfish.julius")
-        toWidgetHead $(juliusFile "templates/julius/main.julius")
+        toWidget $(juliusFile "templates/julius/hoverIntent.julius")
+        toWidget $(juliusFile "templates/julius/superfish.julius")
+        toWidget $(juliusFile "templates/julius/main.julius")
         $(whamletFile "templates/homepage.hamlet")
         
 getBandaR :: Handler Html
