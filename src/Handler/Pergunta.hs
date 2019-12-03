@@ -51,8 +51,6 @@ postPerguntaR = do
             redirect PerguntaR
         _ -> redirect HomeR
         
-
--- Fazer um select com todas as perguntas, e depois outro select só com as alternativas da questão!
         
 getListaQuestoesR :: Handler Html
 getListaQuestoesR = do

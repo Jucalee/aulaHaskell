@@ -6,7 +6,7 @@
         <div .col-md-8>
             <h3>Questão: #{perguntaDescricao pergunta}
             <ul .list-group>
-                $forall (alternativa) <- alternativas -- realizar o filtro por perguntaId
+                $forall (alternativa) <- alternativas
                     $if id pergunta == perguntaid alternativa
                         $if alternativaiscorreta == true
                             <li .list-item><b>#{alternativaDescricao alternativa}
