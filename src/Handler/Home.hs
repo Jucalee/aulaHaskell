@@ -29,52 +29,54 @@ getPage1R = do
 getHomeR :: Handler Html
 getHomeR = do
     defaultLayout $ do
-        -- remoto
-        -- addScriptRemote "link min do JQuery"
-        -- está no projeto
         addStylesheet (StaticR css_bootstrap_css)
-        sess <- lookupSession "_NOME"
-        toWidgetHead [julius|
-            function ola() {
-                alert("OLA MUNDO");
-            }
-        |]
-        toWidgetHead [lucius|
-            h1 {
-                color : red;
-            }
-            
-            ul {
-                display: inline;
-                list-style: none;
-            }
-        |]
+        addStylesheetRemote "https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,300"
+        toWidgetHead $(luciusFile "templates/lucius/animate.lucius")
+        toWidgetHead $(luciusFile "templates/lucius/icomoon.lucius")
+        toWidgetHead $(luciusFile "templates/lucius/style.lucius")
+        toWidgetHead $(luciusFile "templates/lucius/superfish.lucius")
+        addScript (StaticR js_modernizr_js)
+        addScriptRemote "https://code.jquery.com/jquery-3.4.1.min.js"
+        addScript (StaticR js_easing_js)
+        addScript (StaticR js_bootstrap_js)
+        addScript (StaticR js_waypoints_js)
+        addScript (StaticR js_stellar_js)
+        toWidgetHead $(juliusFile "templates/julius/hoverIntent.julius")
+        toWidgetHead $(juliusFile "templates/julius/superfish.julius")
+        toWidgetHead $(juliusFile "templates/julius/main.julius")
+        $(whamletFile "templates/homepage.hamlet")
+        
+getBandaR :: Handler Html
+getBandaR = do
+    defaultLayout $ do
+        addStylesheet (StaticR css_bootstrap_css)
         [whamlet|
-            <div>
-                <h1>
-                    OLA MUNDO
-
-            <ul>
-                <li>
-                    <a href=@{Page1R}>
-                        Pagina 1
-                        
-                <li>
-                    <a href=@{Page2R}>
-                        Pagina 2
-
-                $maybe nome <- sess
-                    <li>
-                        <div>
-                            Ola #{nome}
-                        <form method=post action=@{SairR}>
-                            <input type="submit" value="Sair">
-                            
-                $nothing
-                    <li>
-                        <div>
-                            CONVIDADO
-                    
-            <button class"btn btn-danger" onclick="ola()">
-                OK
+            <h1>
+                BANDA
         |]
+        
+getQuizR :: Handler Html
+getQuizR = do
+    defaultLayout $ do
+        addStylesheet (StaticR css_bootstrap_css)
+        [whamlet|
+            <h1>
+                QUIZ
+        |]
+        
+getSobreR :: Handler Html
+getSobreR = do
+    defaultLayout $ do
+        addStylesheet (StaticR css_bootstrap_css)
+        [whamlet|
+            <h1>
+                Sobre
+        |]
+
+-- getQuizR :: Handler Html
+-- getQuizR = do
+--     defaultLayout $ do
+--         addStylesheet (StaticR css_bootstrap_css)
+--         toWidgetHead $(juliusFile "templates/homepage.julius")
+--         toWidgetHead $(luciusFile "templates/homepage.lucius")
+--         $(whamletFile "templates/homepage.hamlet")

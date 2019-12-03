@@ -15,3 +15,7 @@
 /alternativa AlternativaR GET POST
 
 /listaquestoes ListaQuestoesR GET
+
+/banda BandaR GET
+/quiz QuizR GET
+/sobre SobreR GET
