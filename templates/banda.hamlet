@@ -1,0 +1,85 @@
+<div #corpo-site>
+	<div #page>
+		<div #header>
+			<header #header-section>
+				<div .container>
+					<div .nav-header>
+						<a href="#" .js-nav-toggle .nav-toggle><i>
+						<h1 #logo>
+							<a href=@{HomeR}>Quiz<span>BTS
+						<nav #menu-wrap role="navigation">
+							<ul .sf-menu #primary-menu>
+								<li>
+									<a href=@{HomeR}>
+										Início
+								<li .active>
+									<a href=@{BandaR} .sub-ddown>Banda
+								<li>
+									<a href=@{QuizR} .sub-ddown>Quiz
+								<li>
+									<a href=@{SobreR}>Sobre
+		<div .hero .hero-2>
+			<div .overlay>
+			<div .cover .cover_2 .text-center data-stellar-background-ratio="0.5" style="background-image: url(@{StaticR wallpaper_jpg});">
+				<div .desc animate-box>
+					<h2>Banda
+					<span> BTS, também conhecido como Bangtan Boys, Bulletproof Boy Scouts, Bangtan Sonyeondan, foi criada em 2013 na Coreia do Sul e é composto por sete integrantes.
+		<div #services>
+			<div .container>
+				<div .row .row-bottom-padded-lg>
+					<div .col-md-3>
+						<div .icon>
+							<img #img .img-responsive .image src=@{StaticR jin_jpg} alt="Bangtan" title="Foto do Jin">
+					<div .col-md-8 .col-md-push-1>
+						<h4 .number>01.
+						<h2>Jin
+						<p>Kim Seok-jin, mais conhecido na carreira musical por seu nome artístico Jin, é um cantor, compositor e dançarino sul-coreano. 
+						<p>Estreou como membro do grupo BTS em junho de 2013.
+				<div .row .row-bottom-padded-lg>
+					<div .col-md-3 .col-md-push-8>
+						<div .icon>
+							<img #img .img-responsive .image src=@{StaticR suga_jpg} alt="Bangtan" title="Foto do Suga">
+					<div .col-md-7 .col-md-pull-3>
+						<h4 .number>02.
+						<h2>Suga 
+						<p>Min Yoon-gi, mais conhecido por seu nome artístico Suga, é um rapper, compositor e produtor musical sul-coreano. Tornou-se popularmente conhecido por ser integrante do grupo BTS, formado pela Big Hit Entertainment em 2013.
+				<div .row .row-bottom-padded-lg>
+					<div .col-md-3>
+						<div .icon>
+							<img #img .img-responsive .image src=@{StaticR jhope_jpg} alt="Bangtan" title="Foto do JHope">
+					<div .col-md-8 .col-md-push-1>
+						<h4 .number>03.
+						<h2>J-Hope
+						<p>Jung Hoseok, mais conhecido na carreira musical por seu nome artístico J-Hope, é um rapper, dançarino, compositor e produtor musical sul-coreano. Ele é popularmente conhecido por ser integrante do grupo masculino BTS.
+				<div .row>
+					<div .col-md-3 .col-md-push-8>
+						<div .icon>
+							<img #img .img-responsive .image src=@{StaticR rm_jpg} alt="Bangtan" title="Foto do RM">
+					<div .col-md-7 .col-md-pull-3>
+						<h4 .number>04.
+						<h2>RM
+						<p> Kim Nam-joon, mais conhecido por seu nome artístico RM (anteriormente conhecido como Rap Monster, é um rapper, compositor e produtor musical sul-coreano. Tornou-se popularmente conhecido por ser integrante do grupo sul-coreano BTS. Em 2015, lançou sua primeira mixtape, intulada RM.
+				<div .row .row-bottom-padded-lg>
+					<div .col-md-3>
+						<div .icon>
+							<img #img .img-responsive .image src=@{StaticR jimin_jpg} alt="Bangtan" title="Foto do JHope">
+					<div .col-md-8 .col-md-push-1>
+						<h4 .number>05.
+						<h2>Jimin
+						<p>Park Ji-min (nascido em 13 de outubro de 1995), mais frequentemente creditado na carreira musical apenas como Jimin, é um cantor e dançarino sul-coreano. Estreou como membro do grupo BTS (também conhecido como Bangtan Boys), em junho de 2013.
+				<div .row>
+					<div .col-md-3 .col-md-push-8>
+						<div .icon>
+							<img #img .img-responsive .image src=@{StaticR v_png} alt="Bangtan" title="Foto do RM">
+					<div .col-md-7 .col-md-pull-3>
+						<h4 .number>06.
+						<h2>V
+						<p> Kim Tae-hyung (30 de dezembro de 1995), mais conhecido na carreira musical por seu nome artístico V, é um cantor, ator e compositor sul-coreano. Tornou-se popularmente conhecido por ser integrante do grupo sul-coreano BTS, formado pela Big Hit Entertainment em 2013. Em dezembro de 2016, realizou sua estreia como ator na série Hwarang: The Beginning.
+				<div .row .row-bottom-padded-lg>
+					<div .col-md-3>
+						<div .icon><img #img .img-responsive .image src=@{StaticR jung_jpg} alt="Bangtan" title="Foto do JHope">
+					<div .col-md-8 .col-md-push-1>
+						<h4 .number>07.
+						<h2>Jungkook
+						<p>Jeon Jung-kook (1 de setembro de 1997), mais frequentemente creditado na carreira musical apenas como Jungkook, é um cantor, compositor e produtor musical sul-coreano. Estreou como membro do grupo BTS em junho de 2013.
+		<footer>
