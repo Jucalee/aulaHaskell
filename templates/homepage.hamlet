@@ -14,7 +14,7 @@
                                 <li><a href=@{SobreR}>Sobre
         <div .hero>
             <div .overlay>
-            <div .cover .text-center data-stellar-background-ratio="0.5" style="background-image: url(@{StaticR wallpaper});">
+            <div .cover .text-center data-stellar-background-ratio="0.5" style="background-image: url(@{StaticR wallpaper_jpg});">
                 <div .desc .animate-box>
                     <h2>QuizBTS
                     <span>Uma página resumida sobre o BTS.
@@ -41,7 +41,7 @@
                 <div .row>
                     <div .col-lg-4 .col-md-4>
                         <div .blog .animate-box>
-                            <img .img-responsive .image src=@{StaticR bangtan} width="345px" height="293px" alt="BangtanBrasil" title="Foto do site Bangtan Brasil">
+                            <img .img-responsive .image src=@{StaticR bangtan_jpg} width="345px" height="293px" alt="BangtanBrasil" title="Foto do site Bangtan Brasil">
                             <div .image-popup href="">
                                 <div .prod-title>
                                     <h3><a href="https://bangtan.com.br/">BangTan Brasil
@@ -50,7 +50,7 @@
                                     <a href="https://bangtan.com.br/" .btn .btn-primary>Leia mais!
                     <div .col-lg-4 .col-md-4>
                         <div .blog .animate-box>
-                            <img .img-responsive .image src=@{StaticR btscapricho} width="345px" height="293px" alt="Revista Capricho" title="Notícias sobre BTS">
+                            <img .img-responsive .image src=@{StaticR btscapricho_jpg} width="345px" height="293px" alt="Revista Capricho" title="Notícias sobre BTS">
                             <div .image-popup href="#">
                                 <div .prod-title>
                                     <h3><a href="https://capricho.abril.com.br/noticias-sobre/bts/">Notícias sobre BTS
@@ -59,11 +59,11 @@
                                     <a href="https://capricho.abril.com.br/noticias-sobre/bts/" .btn .btn-primary>Leia mais!
                     <div .col-lg-4 .col-md-4>
                         <div .blog .animate-box>
-                            <img .img-responsive .image src=@{StaticR bts_fb} width="345px" height="293px" alt="Logo BTS Fan Page" title="Fan Page Official BTS">
+                            <img .img-responsive .image src=@{StaticR bts_fb_jpg} width="345px" height="293px" alt="Logo BTS Fan Page" title="Fan Page Official BTS">
                             <div .image-popup href="#">
                                 <div .prod-title>
                                     <h3><a href="https://www.facebook.com/btsfanpageofficial/">BTS Fan Page Official
-                                    <span .posted_by>Facebook
+                                    <span .postecd_by>Facebook
                                     <p>Fan Page Official do BTS na plataforma do Facebook.
                                     <a href="https://www.facebook.com/btsfanpageofficial/" .btn .btn-primary>Leia mais!
         <footer>
