@@ -51,12 +51,14 @@ postPerguntaR = do
             redirect PerguntaR
         _ -> redirect HomeR
         
+
+-- Fazer um select com todas as perguntas, e depois outro select só com as alternativas da questão!
+        
 getListaQuestoesR :: Handler Html
 getListaQuestoesR = do
-    let sql = "SELECT ??, ?? FROM pergunta \
-          \ INNER JOIN alternativa ON  alternativa.perguntaid = pergunta.id \
-          \ GROUP BY ??"
-    conjunto <- runDB $ rawSql sql [] :: Handler [(Entity Pergunta,Entity Alternativa, Entity Pergunta)] 
+    perguntas <- runDB $ selectList [] [Asc PerguntaDescricao]
+    alternativas <- runDB $ selectList [] [Asc AlternativaDescricao]
+    
     defaultLayout $ do
         setTitle "Listagem de Questões"
         addStylesheet (StaticR css_bootstrap_css)

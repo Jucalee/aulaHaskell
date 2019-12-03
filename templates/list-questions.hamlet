@@ -2,9 +2,13 @@
 
     <h1>Listagem de questões
     
-    $forall (Entity _ pergunta, Entity _ _) <- conjunto
+    $forall (pergunta) <- perguntas
         <div .col-md-8>
             <h3>Questão: #{perguntaDescricao pergunta}
             <ul .list-group>
-                $forall (Entity perguntaid pergunta, Entity _ alternativa) <- conjunto
-                    <li .list-item>#{alternativaDescricao alternativa}
+                $forall (alternativa) <- alternativas -- realizar o filtro por perguntaId
+                    $if id pergunta == perguntaid alternativa
+                        $if alternativaiscorreta == true
+                            <li .list-item><b>#{alternativaDescricao alternativa}
+                        $else
+                            <li .list-item>#{alternativaDescricao alternativa}

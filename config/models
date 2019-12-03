@@ -28,4 +28,3 @@ QuizPergunta
     perguntaid PerguntaId
     iscorreta Bool
     deriving Show
-    
