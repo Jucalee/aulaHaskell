@@ -6,9 +6,9 @@
         <div .col-md-8>
             <h3>Questão: #{perguntaDescricao pergunta}
             <ul .list-group>
-                $forall (alternativa) <- alternativas
+                $forall (Entity _ alternativa) <- alternativas
                     $if key pergunta == perguntaid alternativa
-                        $if alternativaiscorreta == true
+                        $if alternativaiscorreta == True
                             <li .list-item><b>#{alternativaDescricao alternativa}
                         $else
                             <li .list-item>#{alternativaDescricao alternativa}
