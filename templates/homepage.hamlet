@@ -1,69 +1,69 @@
 <div #corpo-site>
-	<div #page>
-		<div #header>
-			<header #header-section>
-				<div .container>
-					<div .nav-header>
-						<a href="#" .js-nav-toggle nav-toggle><i>
-						<h1 #logo><a href=@{HomeR}>Quiz<span>BTS
-						<nav #menu-wrap role="navigation">
-							<ul .sf-menu #primary-menu>
-								<li .active><a href=@{HomeR}>Início
-								<li><a href=@{BandaR} .sub-ddown>Banda
-								<li><a href=@{QuizR} .sub-ddown>Quiz
-								<li><a href=@{SobreR}>Sobre
-		<div .hero>
-			<div .overlay>
-			<div .cover .text-center data-stellar-background-ratio="0.5" style="background-image: url(@{StaticR wallpaper});">
-				<div .desc .animate-box>
-					<h2>QuizBTS
-					<span>Uma página resumida sobre o BTS.
-		<div #content-section>
-			<div .container>
-				<div .row>
-					<div .col-md-8 .col-md-offset-2 .text-center .heading-section .animate-box>
-						<h3>Um pouco sobre BTS
-			<div .container>
-				<div .row>
-					<div .col-md-10 .col-md-offset-1>
-						<div .testimonial .text-center .animate-box>
-							<blockquote>
-								<p>BTS, também conhecido como Bangtan Boys, é um grupo sul-coreano estreado pela Big Hit Entertainment em 2013. 
-								<p>Esse grupo, tipicamente de K-Pop, é composto por sete membros: Jin, Suga, J-Hope, RM, Jimin, V e Jungkook. 
-							<span>Wikipedia
-		<div #blog-section .section-gray>
-			<div .container>
-				<div .row>
-					<div .col-md-8 .col-md-offset-2 .text-center .heading-section .animate-box>
-						<h3>Sites sobre BTS
-						<p>Principais sites que falam sobre o assunto da boyband sul-coreana
-			<div .container>
-				<div .row>
-					<div .col-lg-4 .col-md-4>
-						<div .blog .animate-box>
-							<img .img-responsive .image src=@{StaticR bangtan} width="345px" height="293px" alt="BangtanBrasil" title="Foto do site Bangtan Brasil">
-							<div .image-popup href="">
-								<div .prod-title>
-									<h3><a href="https://bangtan.com.br/">BangTan Brasil
-									<span .posted_by>BangtanBrasil
-									<p>A primeira e mais completa fonte sobre BTS do Brasil
-									<a href="https://bangtan.com.br/" .btn .btn-primary>Leia mais!
-					<div .col-lg-4 .col-md-4>
-						<div .blog .animate-box>
-							<img .img-responsive .image src=@{StaticR btscapricho} width="345px" height="293px" alt="Revista Capricho" title="Notícias sobre BTS">
-							<div .image-popup href="#">
-								<div .prod-title>
-									<h3><a href="https://capricho.abril.com.br/noticias-sobre/bts/">Notícias sobre BTS
-									<span .posted_by>Capricho
-									<p>As principais notícias sobre a banda sul-coreana BTS.
-									<a href="https://capricho.abril.com.br/noticias-sobre/bts/" .btn .btn-primary>Leia mais!
-					<div .col-lg-4 .col-md-4>
-						<div .blog .animate-box>
-							<img .img-responsive .image src=@{StaticR bts_fb} width="345px" height="293px" alt="Logo BTS Fan Page" title="Fan Page Official BTS">
-							<div .image-popup href="#">
-								<div .prod-title>
-									<h3><a href="https://www.facebook.com/btsfanpageofficial/">BTS Fan Page Official
-									<span .posted_by>Facebook
-									<p>Fan Page Official do BTS na plataforma do Facebook.
-									<a href="https://www.facebook.com/btsfanpageofficial/" .btn .btn-primary>Leia mais!
-		<footer>
+    <div #page>
+        <div #header>
+            <header #header-section>
+                <div .container>
+                    <div .nav-header>
+                        <a href="#" .js-nav-toggle nav-toggle><i>
+                        <h1 #logo><a href=@{HomeR}>Quiz<span>BTS
+                        <nav #menu-wrap role="navigation">
+                            <ul .sf-menu #primary-menu>
+                                <li .active><a href=@{HomeR}>Início
+                                <li><a href=@{BandaR} .sub-ddown>Banda
+                                <li><a href=@{QuizR} .sub-ddown>Quiz
+                                <li><a href=@{SobreR}>Sobre
+        <div .hero>
+            <div .overlay>
+            <div .cover .text-center data-stellar-background-ratio="0.5" style="background-image: url(@{StaticR wallpaper});">
+                <div .desc .animate-box>
+                    <h2>QuizBTS
+                    <span>Uma página resumida sobre o BTS.
+        <div #content-section>
+            <div .container>
+                <div .row>
+                    <div .col-md-8 .col-md-offset-2 .text-center .heading-section .animate-box>
+                        <h3>Um pouco sobre BTS
+            <div .container>
+                <div .row>
+                    <div .col-md-10 .col-md-offset-1>
+                        <div .testimonial .text-center .animate-box>
+                            <blockquote>
+                                <p>BTS, também conhecido como Bangtan Boys, é um grupo sul-coreano estreado pela Big Hit Entertainment em 2013. 
+                                <p>Esse grupo, tipicamente de K-Pop, é composto por sete membros: Jin, Suga, J-Hope, RM, Jimin, V e Jungkook. 
+                            <span>Wikipedia
+        <div #blog-section .section-gray>
+            <div .container>
+                <div .row>
+                    <div .col-md-8 .col-md-offset-2 .text-center .heading-section .animate-box>
+                        <h3>Sites sobre BTS
+                        <p>Principais sites que falam sobre o assunto da boyband sul-coreana
+            <div .container>
+                <div .row>
+                    <div .col-lg-4 .col-md-4>
+                        <div .blog .animate-box>
+                            <img .img-responsive .image src=@{StaticR bangtan} width="345px" height="293px" alt="BangtanBrasil" title="Foto do site Bangtan Brasil">
+                            <div .image-popup href="">
+                                <div .prod-title>
+                                    <h3><a href="https://bangtan.com.br/">BangTan Brasil
+                                    <span .posted_by>BangtanBrasil
+                                    <p>A primeira e mais completa fonte sobre BTS do Brasil
+                                    <a href="https://bangtan.com.br/" .btn .btn-primary>Leia mais!
+                    <div .col-lg-4 .col-md-4>
+                        <div .blog .animate-box>
+                            <img .img-responsive .image src=@{StaticR btscapricho} width="345px" height="293px" alt="Revista Capricho" title="Notícias sobre BTS">
+                            <div .image-popup href="#">
+                                <div .prod-title>
+                                    <h3><a href="https://capricho.abril.com.br/noticias-sobre/bts/">Notícias sobre BTS
+                                    <span .posted_by>Capricho
+                                    <p>As principais notícias sobre a banda sul-coreana BTS.
+                                    <a href="https://capricho.abril.com.br/noticias-sobre/bts/" .btn .btn-primary>Leia mais!
+                    <div .col-lg-4 .col-md-4>
+                        <div .blog .animate-box>
+                            <img .img-responsive .image src=@{StaticR bts_fb} width="345px" height="293px" alt="Logo BTS Fan Page" title="Fan Page Official BTS">
+                            <div .image-popup href="#">
+                                <div .prod-title>
+                                    <h3><a href="https://www.facebook.com/btsfanpageofficial/">BTS Fan Page Official
+                                    <span .posted_by>Facebook
+                                    <p>Fan Page Official do BTS na plataforma do Facebook.
+                                    <a href="https://www.facebook.com/btsfanpageofficial/" .btn .btn-primary>Leia mais!
+        <footer>
