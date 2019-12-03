@@ -32,9 +32,8 @@
 					<div .col-md-10 .col-md-offset-1>
 						<div .testimonial .text-center .animate-box>
 							<blockquote>
-								<p>
-									BTS, também conhecido como Bangtan Boys, é um grupo sul-coreano estreado pela Big Hit Entertainment em 2013. 
-									Esse grupo, tipicamente de K-Pop, é composto por sete membros: Jin, Suga, J-Hope, RM, Jimin, V e Jungkook. 
+								<p>BTS, também conhecido como Bangtan Boys, é um grupo sul-coreano estreado pela Big Hit Entertainment em 2013. 
+								<p>Esse grupo, tipicamente de K-Pop, é composto por sete membros: Jin, Suga, J-Hope, RM, Jimin, V e Jungkook. 
 							<span>Wikipedia
 							
 		<div #blog-section .section-gray>
