@@ -2,7 +2,7 @@
 
     <h1>Listagem de questões
     
-    $forall (pergunta) <- perguntas
+    $forall (Entity _ pergunta) <- perguntas
         <div .col-md-8>
             <h3>Questão: #{perguntaDescricao pergunta}
             <ul .list-group>
