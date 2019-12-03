@@ -16,7 +16,7 @@
 								<li><a href=@{QuizR} .sub-ddown>Quiz
 								
 								<li><a href=@{SobreR}>Sobre
-        <div .hero>
+		<div .hero>
 			<div .overlay>
 			<div .cover .text-center data-stellar-background-ratio="0.5" style="background-image: url(@{StaticR wallpaper});">
 				<div .desc .animate-box>
