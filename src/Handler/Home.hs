@@ -29,7 +29,7 @@ getPage1R = do
 getHomeR :: Handler Html
 getHomeR = do
     defaultLayout $ do
-        toWidgetHead $(luciusFile "templates/lucius/style.lucius")
+        addStylesheet (StaticR css_style_css)
         addStylesheet (StaticR css_bootstrap_css)
         addScript (StaticR js_jquery_js)
         addScript (StaticR js_modernizr_js)
