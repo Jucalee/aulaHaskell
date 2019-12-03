@@ -6,15 +6,11 @@
 					<div .nav-header>
 						<a href="#" .js-nav-toggle nav-toggle><i>
 						<h1 #logo><a href=@{HomeR}>Quiz<span>BTS
-					
 						<nav #menu-wrap role="navigation">
 							<ul .sf-menu #primary-menu>
 								<li .active><a href=@{HomeR}>Início
-								
 								<li><a href=@{BandaR} .sub-ddown>Banda
-								
 								<li><a href=@{QuizR} .sub-ddown>Quiz
-								
 								<li><a href=@{SobreR}>Sobre
 		<div .hero>
 			<div .overlay>
@@ -35,7 +31,6 @@
 								<p>BTS, também conhecido como Bangtan Boys, é um grupo sul-coreano estreado pela Big Hit Entertainment em 2013. 
 								<p>Esse grupo, tipicamente de K-Pop, é composto por sete membros: Jin, Suga, J-Hope, RM, Jimin, V e Jungkook. 
 							<span>Wikipedia
-							
 		<div #blog-section .section-gray>
 			<div .container>
 				<div .row>
