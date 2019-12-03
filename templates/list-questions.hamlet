@@ -7,7 +7,7 @@
             <h3>Questão: #{perguntaDescricao pergunta}
             <ul .list-group>
                 $forall (Entity _ alternativa) <- alternativas
-                    $if key pergunta == perguntaid alternativa
+                    $if perguntaid pergunta == perguntaid alternativa
                         $if alternativaiscorreta == True
                             <li .list-item><b>#{alternativaDescricao alternativa}
                         $else
