@@ -35,8 +35,8 @@ getHomeR = do
         toWidgetHead $(luciusFile "templates/lucius/icomoon.lucius")
         toWidgetHead $(luciusFile "templates/lucius/style.lucius")
         toWidgetHead $(luciusFile "templates/lucius/superfish.lucius")
+        addScript (StaticR js_jquery_js)
         addScript (StaticR js_modernizr_js)
-        addScriptRemote "https://code.jquery.com/jquery-3.4.1.min.js"
         addScript (StaticR js_easing_js)
         addScript (StaticR js_bootstrap_js)
         addScript (StaticR js_waypoints_js)
