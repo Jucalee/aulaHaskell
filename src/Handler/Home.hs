@@ -30,17 +30,17 @@ getHomeR :: Handler Html
 getHomeR = do
     defaultLayout $ do
         addStylesheet (StaticR css_bootstrap_css)
-        addStylesheetRemote "https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,300"
-        toWidgetHead $(luciusFile "templates/lucius/animate.lucius")
-        toWidgetHead $(luciusFile "templates/lucius/icomoon.lucius")
-        toWidgetHead $(luciusFile "templates/lucius/style.lucius")
-        toWidgetHead $(luciusFile "templates/lucius/superfish.lucius")
         addScript (StaticR js_jquery_js)
         addScript (StaticR js_modernizr_js)
         addScript (StaticR js_easing_js)
         addScript (StaticR js_bootstrap_js)
         addScript (StaticR js_waypoints_js)
         addScript (StaticR js_stellar_js)
+        addStylesheetRemote "https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,300"
+        toWidgetHead $(luciusFile "templates/lucius/animate.lucius")
+        toWidgetHead $(luciusFile "templates/lucius/icomoon.lucius")
+        toWidgetHead $(luciusFile "templates/lucius/style.lucius")
+        toWidgetHead $(luciusFile "templates/lucius/superfish.lucius")
         toWidgetHead $(juliusFile "templates/julius/hoverIntent.julius")
         toWidgetHead $(juliusFile "templates/julius/superfish.julius")
         toWidgetHead $(juliusFile "templates/julius/main.julius")
