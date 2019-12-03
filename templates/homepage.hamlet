@@ -10,7 +10,8 @@ $doctype 5
                         <nav #menu-wrap role="navigation">
                             <ul .sf-menu #primary-menu>
                                 <li .active>
-                                    <a href=@{HomeR}>Início
+                                    <a href=@{HomeR}>
+                                        Início
                                 <li>
                                     <a href=@{BandaR} .sub-ddown>Banda
                                 <li>
