@@ -22,7 +22,6 @@
 				<div .desc .animate-box>
 					<h2>QuizBTS
 					<span>Uma página resumida sobre o BTS.
-
 		<div #content-section>
 			<div .container>
 				<div .row>
