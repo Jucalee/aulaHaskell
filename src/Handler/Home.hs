@@ -29,6 +29,7 @@ getPage1R = do
 getHomeR :: Handler Html
 getHomeR = do
     defaultLayout $ do
+        toWidgetHead $(luciusFile "templates/lucius/style.lucius")
         addStylesheet (StaticR css_bootstrap_css)
         addScript (StaticR js_jquery_js)
         addScript (StaticR js_modernizr_js)
@@ -39,7 +40,6 @@ getHomeR = do
         addStylesheetRemote "https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,300"
         toWidgetHead $(luciusFile "templates/lucius/animate.lucius")
         toWidgetHead $(luciusFile "templates/lucius/icomoon.lucius")
-        toWidgetHead $(luciusFile "templates/lucius/style.lucius")
         toWidgetHead $(luciusFile "templates/lucius/superfish.lucius")
         toWidget $(juliusFile "templates/julius/hoverIntent.julius")
         toWidget $(juliusFile "templates/julius/superfish.julius")
