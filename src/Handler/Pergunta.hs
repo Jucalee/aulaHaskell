@@ -54,7 +54,7 @@ postPerguntaR = do
         
 getListaQuestoesR :: Handler Html
 getListaQuestoesR = do
-    perguntas <- runDB $ selectList [] [Asc PerguntaDescricao]
+    perguntas <- runDB $ selectList [] [Asc PerguntaId]
     alternativas <- runDB $ selectList [] [Asc AlternativaDescricao]
     
     defaultLayout $ do
