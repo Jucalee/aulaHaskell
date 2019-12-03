@@ -4,7 +4,7 @@
     
     $forall (Entity pid pergunta) <- perguntas
         <div .col-md-8>
-            <h3>Questão #{toPathPiece $ pid pergunta}: #{perguntaDescricao pergunta}
+            <h3>Questão #{toPathPiece $ perguntaId pergunta}: #{perguntaDescricao pergunta}
             <ul .list-group>
                 $forall (Entity _ alternativa) <- alternativas
                     $if pid == alternativaPerguntaid alternativa
