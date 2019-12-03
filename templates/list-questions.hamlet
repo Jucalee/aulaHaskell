@@ -2,12 +2,12 @@
 
     <h1>Listagem de questões
     
-    $forall (Entity k pergunta) <- perguntas
+    $forall (Entity _ pergunta) <- perguntas
         <div .col-md-8>
             <h3>Questão: #{perguntaDescricao pergunta}
             <ul .list-group>
                 $forall (Entity _ alternativa) <- alternativas
-                    $if k pergunta == perguntaid alternativa
+                    $if toPathPiece $ perguntaid pergunta == perguntaid alternativa
                         $if alternativaiscorreta == True
                             <li .list-item><b>#{alternativaDescricao alternativa}
                         $else
