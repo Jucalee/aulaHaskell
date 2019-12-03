@@ -7,8 +7,8 @@
             <h3>Questão: #{perguntaDescricao pergunta}
             <ul .list-group>
                 $forall (Entity _ alternativa) <- alternativas
-                    $if toPathPiece $ PerguntaId pergunta == perguntaid alternativa
-                        $if alternativaiscorreta alternativa == True
+                    $if toPathPiece $ PerguntaId pergunta == PerguntaId alternativa
+                        $if AlternativaIscorreta alternativa == True
                             <li .list-item><b>#{alternativaDescricao alternativa}
                         $else
                             <li .list-item>#{alternativaDescricao alternativa}
