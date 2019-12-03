@@ -41,7 +41,7 @@
                 <div .row>
                     <div .col-lg-4 .col-md-4>
                         <div .blog .animate-box>
-                            <img .img-responsive .image src=@{StaticR bangtan_jpg} width="345px" height="293px" alt="BangtanBrasil" title="Foto do site Bangtan Brasil">
+                            <img .img-responsive .image src=@{StaticR bangtan_png} width="345px" height="293px" alt="BangtanBrasil" title="Foto do site Bangtan Brasil">
                             <div .image-popup href="">
                                 <div .prod-title>
                                     <h3><a href="https://bangtan.com.br/">BangTan Brasil
