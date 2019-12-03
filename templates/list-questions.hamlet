@@ -9,6 +9,6 @@
                 $forall (Entity _ alternativa) <- alternativas
                     $if pid == alternativaPerguntaid alternativa
                         $if alternativaIscorreta alternativa == True
-                            <li .list-item><b> #{alternativaDescricao alternativa}
+                            <li .list-item>alternativa certa -> #{alternativaDescricao alternativa}
                         $else
                             <li .list-item>#{alternativaDescricao alternativa}
