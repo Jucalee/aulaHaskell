@@ -2,12 +2,13 @@
 
     <h1>Listagem de questões
     
-    $forall (Entity _ pergunta) <- perguntas
+    
+    $forall (Entity pid pergunta) <- perguntas
         <div .col-md-8>
             <h3>Questão: #{perguntaDescricao pergunta}
             <ul .list-group>
                 $forall (Entity _ alternativa) <- alternativas
-                    $if alternativaIscorreta alternativa
+                    $if alternativaIscorreta alternativa == True
                         <li .list-item><b>#{alternativaDescricao alternativa}
                     $else
                         <li .list-item>#{alternativaDescricao alternativa}
