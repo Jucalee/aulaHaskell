@@ -15,13 +15,13 @@ Quiz
     
 Pergunta
     descricao Text
-    deriving Show, Eq
+    deriving (Show, Eq)
     
 Alternativa
     perguntaid PerguntaId
     descricao Text
     iscorreta Bool
-    deriving Show, Eq
+    deriving (Show, Eq)
     
 QuizPergunta
     quizid QuizId
