@@ -71,9 +71,7 @@ getQuizR = do
     -- perguntas <- runDB $ selectList [] [Asc PerguntaId] -> Javascript
     -- alternativas <- runDB $ selectList [] [Asc AlternativaDescricao]
     
-    perguntas <- toJSON (Entity pid (Pergunta descricao)) = object
-        [ "id" .= pid
-        , "descricao" .= descricao ]
+    perguntas <- toJSON (Entity pid (Pergunta descricao)) let object [ "id" .= pid, "descricao" .= descricao ]
     
     defaultLayout $ do
         addStylesheet (StaticR css_bootstrap_css)
