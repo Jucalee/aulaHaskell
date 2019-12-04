@@ -71,3 +71,9 @@ getAlternativaR = do
 --                     <li>
 --                         #{atorNome ator}
 --         |]
+
+    
+getQuizRespostaR :: Handler Value
+getQuizRespostaR = do
+    alternativas <- runDB $ selectList [] [Asc AlternativaId]
+    returnJson (map entityVal alternativas)

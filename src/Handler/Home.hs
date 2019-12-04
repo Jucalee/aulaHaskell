@@ -65,17 +65,7 @@ getBandaR = do
         toWidget $(juliusFile "templates/julius/superfish.julius")
         toWidget $(juliusFile "templates/julius/main.julius")
         $(whamletFile "templates/banda.hamlet")
-        
-getQuizPerguntaR :: Handler Value
-getQuizPerguntaR = do
-    perguntas <- runDB $ selectList [] [Asc PerguntaId]
-    returnJson (map entityVal perguntas)
-    
-getQuizRespostaR :: Handler Value
-getQuizRespostaR = do
-    alternativas <- runDB $ selectList [] [Asc AlternativaId]
-    returnJson (map entityVal alternativas)
-        
+
 getQuizR :: Handler Html
 getQuizR = do
     defaultLayout $ do

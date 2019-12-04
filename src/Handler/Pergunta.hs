@@ -61,3 +61,9 @@ getListaQuestoesR = do
         setTitle "Listagem de Questões"
         addStylesheet (StaticR css_bootstrap_css)
         $(whamletFile "templates/list-questions.hamlet")
+
+        
+getQuizPerguntaR :: Handler Value
+getQuizPerguntaR = do
+    perguntas <- runDB $ selectList [] [Asc PerguntaId]
+    returnJson (map entityVal perguntas)
