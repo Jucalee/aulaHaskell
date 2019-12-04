@@ -68,7 +68,7 @@ getBandaR = do
         
 getQuizR :: Handler Html
 getQuizR = do
-    perguntas <- runDB $ selectList [] [Asc PerguntaId] -> Javascript
+    perguntas <- runDB $ selectList [] [Asc PerguntaId]
     -- alternativas <- runDB $ selectList [] [Asc AlternativaDescricao]
     
     questoes <- toJSON perguntas object [ "id" .= PerguntaId, "descricao" .= PerguntaDescricao ]
