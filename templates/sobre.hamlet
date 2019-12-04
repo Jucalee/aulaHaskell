@@ -1,14 +1,14 @@
 <div #wrapper>
-	<div #page>
-		<div #header>
-			<header #header-section>
-				<div .container>
-					<div .nav-header>
-						<a href="#" .js-nav-toggle .nav-toggle><i>
-						<h1 #logo><a href=@{HomeR}>Quiz<span>BTS
-						<nav #menu-wrap role="navigation">
-							<ul .sf-menu #primary-menu>
-								<li>
+    <div #page>
+        <div #header>
+            <header #header-section>
+                <div .container>
+                    <div .nav-header>
+                        <a href="#" .js-nav-toggle .nav-toggle><i>
+                        <h1 #logo><a href=@{HomeR}>Quiz<span>BTS
+                        <nav #menu-wrap role="navigation">
+                            <ul .sf-menu #primary-menu>
+                                <li>
                                     <a href=@{HomeR}>
                                         Início
                                 <li>
@@ -17,22 +17,22 @@
                                     <a href=@{QuizR} .sub-ddown>Quiz
                                 <li .active>
                                     <a href=@{SobreR}>Sobre
-		<div .hero .hero-2>
-			<div .overlay>
-			<div .cover .cover_2 .text-center data-stellar-background-ratio="0.5" style="background-image: url(@{StaticR wallpaper_jpg});">
-				<div .desc .animate-box>
-					<h2>Sobre
-					<span>Site criado para projeto de Haskell - dezembro/2019.
-		<div #about>
-			<div .container>
-				<div .row>
-					<div .col-md-8 .col-md-offset-2 .text-center .heading-section .animate-box>
-						<h3>Sobre nós
-						<h5>GRUPO
-						<p>Amanda Mayara <br>
-						<p>Andressa Gusiken <br>
-						<p>Anderson Santana <br>
-						<p>Rafael Lagrange <br>
-						<h5> 6 Ciclo - ADS
-						<h4> Dezembro/2019
-		<footer>
+        <div .hero .hero-2>
+            <div .overlay>
+            <div .cover .cover_2 .text-center data-stellar-background-ratio="0.5" style="background-image: url(@{StaticR wallpaper_jpg});">
+                <div .desc .animate-box>
+                    <h2>Sobre
+                    <span>Site criado para projeto de Haskell - dezembro/2019.
+        <div #about>
+            <div .container>
+                <div .row>
+                    <div .col-md-8 .col-md-offset-2 .text-center .heading-section .animate-box>
+                        <h3>Sobre nós
+                        <h5>GRUPO
+                        <p>Amanda Mayara <br>
+                        <p>Andressa Gusiken <br>
+                        <p>Anderson Santana <br>
+                        <p>Rafael Lagrange <br>
+                        <h5> 6 Ciclo - ADS
+                        <h4> Dezembro/2019
+        <footer>
