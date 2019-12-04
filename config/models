@@ -17,7 +17,7 @@ Pergunta json
     descricao Text
     deriving Eq Ord Show
     
-Alternativa
+Alternativa json
     perguntaid PerguntaId
     descricao Text
     iscorreta Bool

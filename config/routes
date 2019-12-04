@@ -21,3 +21,4 @@
 /sobre SobreR GET
 
 /quizpergunta QuizPerguntaR GET
+/quizresposta QuizRespostaR GET
