@@ -15,7 +15,7 @@ Quiz
     
 Pergunta
     descricao Text
-    deriving Eq Ord Show
+    deriving Eq Ord Show ToJSON
     
 Alternativa
     perguntaid PerguntaId
