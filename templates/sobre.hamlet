@@ -5,12 +5,12 @@
                 <div .container>
                     <div .nav-header>
                         <a href="#" .js-nav-toggle .nav-toggle><i>
-                        <h1 #logo><a href=@{HomeR}>Quiz<span>BTS
+                        <h1 #logo>
+                            <a href=@{HomeR}>Quiz<span>BTS
                         <nav #menu-wrap role="navigation">
                             <ul .sf-menu #primary-menu>
                                 <li>
-                                    <a href=@{HomeR}>
-                                        Início
+                                    <a href=@{HomeR}>Início
                                 <li>
                                     <a href=@{BandaR} .sub-ddown>Banda
                                 <li>
