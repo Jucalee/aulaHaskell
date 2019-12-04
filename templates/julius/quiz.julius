@@ -2,27 +2,34 @@
   var perguntas = [];
   var alternativas = [];
   var questions = [];
-
-  $.get("@{QuizPerguntaR}", function(data, status){
-    perguntas = data;
-    $.get("@{QuizRespostaR}", function(data, status){
-      alternativas = data;
-    });
-    
-    perguntas.forEach(function(pergunta, index){
-      alternativasQuestao = alternativas.filter(function(a){return a.perguntaid == index + 1})
-      questions.push({
-        question: pergunta.descricao,
-        choices: alternativasQuestao,
-        correctAnswer: alternativasQuestao.filter(function(ap){return ap.iscorreta})[0]
-      })
-    });
-    
+  
+  $.ajax({
+    url: "@{QuizPerguntaR}"',
+    async: false,
+    type: "GET",
+    success: function(data) {
+        perguntas = data;
+    }
   });
   
-  while(perguntas.length != 0 && alternativas.length != 0){
-    console.log("await");
-  }
+  $.ajax({
+    url: "@{QuizRespostaR}"',
+    async: false,
+    type: "GET",
+    success: function(data) {
+        alternativas = data;
+    }
+  });
+  
+  perguntas.forEach(function(pergunta, index){
+    alternativasQuestao = alternativas.filter(function(a){return a.perguntaid == index + 1})
+    questions.push({
+      question: pergunta.descricao,
+      choices: alternativasQuestao,
+      correctAnswer: alternativasQuestao.filter(function(ap){return ap.iscorreta})[0]
+    })
+  });
+    
   var questionCounter = 0; //Tracks question number
   var selections = []; //Array containing user choices
   var quiz = $('#quiz'); //Quiz div object
