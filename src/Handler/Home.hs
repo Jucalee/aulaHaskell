@@ -69,7 +69,7 @@ getBandaR = do
         
 getQuizR :: Handler Html
 getQuizR = do
-    perguntas <- runDB $ selectList [] [Asc PerguntaId] -> Javascript
+    perguntas <- runDB $ selectList [] [Asc PerguntaId]
     perguntas_json <- map entityVal perguntas
 --     getImagesR = do
 --   images <- runDB $ selectList [ImagesFilename !=. ""] [Desc ImagesDate]
