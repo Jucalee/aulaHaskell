@@ -1,14 +1,14 @@
 (function() {
-  perguntas = [];
-  alternativas = [];
+  var perguntas = [];
+  var alternativas = [];
 
-  $.get(@{QuizPerguntaR}, function(data, status){
+  $.get("@{QuizPerguntaR}", function(data, status){
     perguntas = data;
   });
   
   console.log(perguntas);
   
-  $.get(@{QuizRespostaR}, function(data, status){
+  $.get("@{QuizRespostaR}", function(data, status){
     alternativas = data;
   });
   
