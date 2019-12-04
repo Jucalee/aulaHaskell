@@ -1,0 +1,25 @@
+<div #corpo-site>
+    <div #page>
+        <div #header>
+            <header #header-section>
+                <div .container>
+                    <div .nav-header>
+                        <a href="#" .js-nav-toggle .nav-toggle><i>
+                        <h1 #logo>
+                            <a href=@{HomeR}>Quiz<span>BTS
+                        <nav #menu-wrap role="navigation">
+                            <ul .sf-menu #primary-menu>
+                                <li>
+                                    <a href=@{HomeR}>
+                                        Início
+                                <li .active>
+                                    <a href=@{BandaR} .sub-ddown>Banda
+                                <li>
+                                    <a href=@{QuizR} .sub-ddown>Quiz
+                                <li>
+                                    <a href=@{SobreR}>Sobre
+    <tbody>
+        $forall Entity pid question <- questions
+            <tr>
+                <td>
+                    #{questionTitle question}
