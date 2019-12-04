@@ -6,13 +6,7 @@ Usuario
     senha Text
     UniqueEmailRest email
     deriving Show
-    
-Quiz
-    usuarioid UsuarioId
-    pontuacao Int
-    datahoracriacao UTCTime
-    deriving Show
-    
+
 Pergunta json
     descricao Text
     deriving Eq Ord Show
@@ -22,9 +16,3 @@ Alternativa json
     descricao Text
     iscorreta Bool
     deriving Eq Ord Show
-    
-QuizPergunta
-    quizid QuizId
-    perguntaid PerguntaId
-    iscorreta Bool
-    deriving Show

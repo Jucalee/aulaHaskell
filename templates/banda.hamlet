@@ -77,7 +77,8 @@
                         <p> Kim Tae-hyung (30 de dezembro de 1995), mais conhecido na carreira musical por seu nome artístico V, é um cantor, ator e compositor sul-coreano. Tornou-se popularmente conhecido por ser integrante do grupo sul-coreano BTS, formado pela Big Hit Entertainment em 2013. Em dezembro de 2016, realizou sua estreia como ator na série Hwarang: The Beginning.
                 <div .row .row-bottom-padded-lg>
                     <div .col-md-3>
-                        <div .icon><img #img .img-responsive .image src=@{StaticR jung_jpg} alt="Bangtan" title="Foto do JHope">
+                        <div .icon>
+                            <img #img .img-responsive .image src=@{StaticR jung_jpg} alt="Bangtan" title="Foto do JHope">
                     <div .col-md-8 .col-md-push-1>
                         <h4 .number>07.
                         <h2>Jungkook
