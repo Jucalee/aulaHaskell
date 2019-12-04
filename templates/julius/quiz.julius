@@ -11,7 +11,7 @@
     
     perguntas.forEach(function(pergunta, index){
       alternativasQuestao = alternativas.filter(function(a){return a.perguntaid == index + 1})
-      questions.append({
+      questions.push({
         question: pergunta.descricao,
         choices: alternativasQuestao,
         correctAnswer: alternativasQuestao.filter(function(ap){return ap.iscorreta})[0]
