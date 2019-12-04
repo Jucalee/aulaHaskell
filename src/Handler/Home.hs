@@ -68,10 +68,10 @@ getBandaR = do
         
 getQuizR :: Handler Html
 getQuizR = do
-    -- perguntas <- runDB $ selectList [] [Asc PerguntaId] -> Javascript
+    perguntas <- runDB $ selectList [] [Asc PerguntaId] -> Javascript
     -- alternativas <- runDB $ selectList [] [Asc AlternativaDescricao]
     
-    perguntas <- toJSON (Entity pid (Pergunta descricao)) object [ "id" .= pid, "descricao" .= descricao ]
+    questoes <- toJSON perguntas object [ "id" .= PerguntaId, "descricao" .= PerguntaDescricao ]
     
     defaultLayout $ do
         addStylesheet (StaticR css_bootstrap_css)

@@ -1,6 +1,6 @@
 (function() {
 //Tem que popular o questions com as questões do banco
-  var perguntas = [#{perguntas}]
+  var perguntas = [#{questoes}]
   
   console.log(perguntas)
     
