@@ -13,9 +13,9 @@ Quiz
     datahoracriacao UTCTime
     deriving Show
     
-Pergunta
+Pergunta json
     descricao Text
-    deriving Eq Ord Show ToJSON
+    deriving Eq Ord Show
     
 Alternativa
     perguntaid PerguntaId
