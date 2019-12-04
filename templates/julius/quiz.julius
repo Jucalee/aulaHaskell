@@ -1,0 +1,8 @@
+(function() {
+//Tem que popular o questions com as questões do banco
+  var perguntas = []
+  
+  $forall (Entity pid pergunta) <- perguntas
+    alert(#{perguntaDescricao pergunta})
+    
+})();

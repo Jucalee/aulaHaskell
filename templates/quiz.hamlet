@@ -18,8 +18,19 @@
                                     <a href=@{QuizR} .sub-ddown>Quiz
                                 <li>
                                     <a href=@{SobreR}>Sobre
-    <tbody>
-        $forall Entity pid question <- questions
-            <tr>
-                <td>
-                    #{questionTitle question}
+        <div .hero hero-2>
+            <div .overlay>
+            <div .cover cover_2 text-center data-stellar-background-ratio="0.5" style="background-image: url(images/wallpaper.jpg);">
+                <div .desc animate-box>
+                    <h2>Quiz BTS
+                    <span> Será que você conhece a boyband BTS?
+        <div #services>
+            <div .container>
+                <div .row row-bottom-padded-lg>
+                    <div .col-md-8 col-md-push-1>
+                        <div #quiz>
+                        <nav .blog-pagination .justify-content-center .d-flex>								 
+                            <ul .pagination>
+                                <div #next><a href='#' .page-link aria-label="Previous">>>>
+                                <div #prev><a href='#' .page-link aria-label="Next"><<<
+                                <div #start><a href='#' .page-link>Jogar Novam.

@@ -68,8 +68,12 @@ getBandaR = do
         
 getQuizR :: Handler Html
 getQuizR = do
+    perguntas <- runDB $ selectList [] [Asc PerguntaId]
+    alternativas <- runDB $ selectList [] [Asc AlternativaDescricao]
+    
     defaultLayout $ do
         addStylesheet (StaticR css_bootstrap_css)
+        toWidget $(juliusFile "templates/julius/quiz.julius")
         [whamlet|
             <h1>
                 QUIZ
