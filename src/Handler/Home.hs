@@ -68,7 +68,7 @@ getBandaR = do
         
 getQuizR :: Handler Html
 getQuizR = do
-    perguntas <- runDB $ selectList [] [Asc PerguntaId]
+    perguntas <- runDB $ selectList [] [Asc PerguntaId] :: [Pergunta]
     alternativas <- runDB $ selectList [] [Asc AlternativaDescricao]
     
     defaultLayout $ do
