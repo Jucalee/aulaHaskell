@@ -34,6 +34,7 @@ instance Yesod App where
     isAuthorized QuizR _ = return Authorized
     isAuthorized SobreR _ = return Authorized
     isAuthorized QuizPerguntaR _ = return Authorized
+    isAuthorized QuizRespostaR _ = return Authorized
     isAuthorized _ _ = isUsuario
 
 isUsuario :: Handler AuthResult

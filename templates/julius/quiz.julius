@@ -6,13 +6,9 @@
     perguntas = data;
   });
   
-  console.log(perguntas);
-  
   $.get("@{QuizRespostaR}", function(data, status){
     alternativas = data;
   });
-  
-  console.log(alternativas);
 
   var questions = [{
     question: "What is 2*5?",
