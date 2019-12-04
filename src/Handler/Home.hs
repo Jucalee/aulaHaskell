@@ -70,6 +70,10 @@ getBandaR = do
 getQuizR :: Handler Html
 getQuizR = do
     perguntas <- runDB $ selectList [] [Asc PerguntaId] -> Javascript
+    perguntas_json <- map entityVal perguntas
+--     getImagesR = do
+--   images <- runDB $ selectList [ImagesFilename !=. ""] [Desc ImagesDate]
+--   returnJson (map entityVal images)
     
     defaultLayout $ do
         addStylesheet (StaticR css_bootstrap_css)
