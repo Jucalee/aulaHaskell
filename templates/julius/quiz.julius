@@ -20,7 +20,7 @@
     
   });
   
-  if (perguntas != undefined && alternativas != undefined){
+  if (perguntas.length != 0 && alternativas.length != 0){
     var questionCounter = 0; //Tracks question number
     var selections = []; //Array containing user choices
     var quiz = $('#quiz'); //Quiz div object
