@@ -19,3 +19,5 @@
 /banda BandaR GET
 /quiz QuizR GET
 /sobre SobreR GET
+
+/quizpergunta QuizPerguntaR GET

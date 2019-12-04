@@ -66,10 +66,14 @@ getBandaR = do
         toWidget $(juliusFile "templates/julius/main.julius")
         $(whamletFile "templates/banda.hamlet")
         
+getQuizPerguntaR :: Handler Html
+getQuizPerguntaR = do
+    perguntas <- runDB $ selectList [] [Asc PerguntaId]
+    returnJson (map entityVal perguntas)
+        
 getQuizR :: Handler Html
 getQuizR = do
-    perguntas <- runDB $ selectList [] [Asc PerguntaId]
-    perguntas_json <- map entityVal perguntas
+    
 --     getImagesR = do
 --   images <- runDB $ selectList [ImagesFilename !=. ""] [Desc ImagesDate]
 --   returnJson (map entityVal images)
