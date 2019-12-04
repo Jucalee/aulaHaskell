@@ -13,7 +13,7 @@ import Text.Julius
 import Database.Persist.Postgresql
 --import Database.Esqueleto
 import Data.Text (Text, concat)
-import Prelude
+
 --
 -- renderDivs
 formPergunta :: Form Pergunta
