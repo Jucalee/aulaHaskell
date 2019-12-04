@@ -4,7 +4,7 @@
   var questions = [];
   
   $.ajax({
-    url: "@{QuizPerguntaR}"',
+    url: "@{QuizPerguntaR}",
     async: false,
     type: "GET",
     success: function(data) {
@@ -13,7 +13,7 @@
   });
   
   $.ajax({
-    url: "@{QuizRespostaR}"',
+    url: "@{QuizRespostaR}",
     async: false,
     type: "GET",
     success: function(data) {
