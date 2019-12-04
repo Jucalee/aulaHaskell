@@ -11,6 +11,7 @@ import Import
 import Text.Lucius
 import Text.Julius
 import Database.Persist.Postgresql
+import Yesod.Javascript
   
   
 getPage2R :: Handler Html 
@@ -68,14 +69,11 @@ getBandaR = do
         
 getQuizR :: Handler Html
 getQuizR = do
-    perguntas <- runDB $ selectList [] [Asc PerguntaId]
-    -- alternativas <- runDB $ selectList [] [Asc AlternativaDescricao]
-    
-    questoes <- toJSON perguntas object [ "id" .= PerguntaId, "descricao" .= PerguntaDescricao ]
+    perguntas <- runDB $ selectList [] [Asc PerguntaId] -> Javascript
     
     defaultLayout $ do
         addStylesheet (StaticR css_bootstrap_css)
-        toWidget $(juliusFile "templates/julius/quiz.julius")
+        --toWidget $(juliusFile "templates/julius/quiz.julius")
         [whamlet|
             <h1>
                 QUIZ
