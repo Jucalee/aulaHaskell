@@ -30,7 +30,13 @@
                     <div .col-md-8 .col-md-push-1>
                         <div #quiz>
                         <nav .blog-pagination .justify-content-center .d-flex>								 
-                        <ul .pagination>
-                            <div #next><a href='#' .page-link aria-label="Previous">>>>
-                            <div #prev><a href='#' .page-link aria-label="Next"><<<
-                            <div #start><a href='#' .page-link>Jogar Novam.
+                            <ul .pagination>
+                                <div #next>
+                                    <a href='#' .page-link aria-label="Previous" style="float: right; font-weight: bolder; color: #ff8100; border-style: inset; border-radius: 10px; padding: 0px 25px;">
+                                        Próxima
+                                <div #prev>
+                                    <a href='#' .page-link aria-label="Next" style="float: right; font-weight: bolder; color: #ff8100; border-style: inset; border-radius: 10px; padding: 0px 25px;">
+                                        Anterior
+                                <div #start>
+                                    <a href='#' .page-link style="float: right; font-weight: bolder; color: #ff8100; border-style: inset; border-radius: 10px; padding: 0px 25px;">
+                                    Jogar Novam.
