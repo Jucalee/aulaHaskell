@@ -11,7 +11,6 @@ import Import
 import Text.Lucius
 import Text.Julius
 import Database.Persist.Postgresql
-import Yesod.Javascript
   
   
 getPage2R :: Handler Html 
