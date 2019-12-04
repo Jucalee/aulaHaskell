@@ -68,7 +68,7 @@ getBandaR = do
         
 getQuizPerguntaR :: Handler Value
 getQuizPerguntaR = do
-    perguntas <- runDB $ selectSource [] [Asc PerguntaId]
+    perguntas <- runDB $ selectList [] [Asc PerguntaId]
     returnJson (map entityVal perguntas)
     
 getQuizRespostaR :: Handler Value
